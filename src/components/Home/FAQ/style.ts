@@ -49,20 +49,15 @@ justify-content: space-between;
 box-shadow: 0px 0.5px 0px #29292e, 0px -0.5px 0px #29292e;
 font-weight: bold;
 z-index: 100;
+
 .rotate{
-    animation: rotateDown 1s;
+    animation: rotateDown 0.5s;
+    transform: rotate(0);
+}
+svg{
     transform: rotate(180deg);
 }
-
 @keyframes rotateDown{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(180deg);
-    }
-}
-@keyframes rotateUp{
     0%{
         transform: rotate(180deg);
     }
