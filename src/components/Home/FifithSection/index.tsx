@@ -19,7 +19,7 @@ const FifithSection = () =>{
         window.removeEventListener("scroll", handleScroll);
       };
     }, []);
-
+    //scrollPosition>=2700+index*260?'fadeIn':'fadeOut'
     return(
         <Section background='gradient'>
             <div style={{width:'100%', maxWidth:'1120px', marginTop:'160px',display:"flex", justifyContent:'space-between'}}>
@@ -28,22 +28,23 @@ const FifithSection = () =>{
                     <h3>Nosso propósito é impulsionar pessoas através da educação.</h3>
                     <p>Queremos dar e elas o poder de acessar as melhores oportunidades de suas carreiras. Não medimos esforços para fazer isso acontecer.</p>
                 </Elevator>
-                <div style={{width:'65%', display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+                <div style={{width:'65%', display:'flex', flexDirection:'column',justifyContent:'space-between'}}>
                 {cardList.map(
                     (card, index) =>{
                         return(
-                            <Card key={index}>
-                                <div className="icon">
-                                    <img src={card.imgSrc}/>
-                                </div>
-                                <div>
-                                    <h1>
-                                        {card.title}
-                                    </h1>
-                                    <p>
-                                        {card.body}
-                                    </p>
-                                </div> 
+                            <Card className={scrollPosition>=2680+index*260?'fadeIn':'fadeOut'} key={index}>
+                                        <div className="icon">
+                                            <img src={card.imgSrc}/>
+                                        </div>
+                                        <div>
+                                            <h1>
+                                                {card.title}
+                                            </h1>
+                                            <p>
+                                                {card.body}
+                                                {scrollPosition}
+                                            </p>
+                                        </div> 
                             </Card>
                         )
                     }

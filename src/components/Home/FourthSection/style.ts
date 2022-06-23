@@ -9,6 +9,7 @@ color:var(--gray);
 justify-content: space-between;
 flex-direction: column;
 
+
 h1{
     font-weight: bold;
     font-size:48px;
@@ -30,6 +31,22 @@ img{
     width: 520px;
     height: 412px;
 }
+.fadeIn{
+    animation: fadeIn 0.5s;
+    opacity: 1;
+}
+.fadeOut{
+    animation: fadeOut 0.3s;
+    opacity: 0;
+}
+@keyframes fadeIn {
+  0% { opacity: 0;
+        transform: translateY(20%);
+}
+  100% { opacity: 1; 
+    transform: translateY(0);}
+}
+
 `
 export const Card = styled.div`
 width: 100%;

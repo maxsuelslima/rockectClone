@@ -117,3 +117,18 @@ body{
 	background: var(--background);
 	font-family: 'Roboto', sans-serif;
 }
+.fadeIn{
+    animation: fadeIn 0.5s;
+    opacity: 1;
+}
+.fadeOut{
+    opacity: 0;
+
+}
+@keyframes fadeIn {
+  0% { opacity: 0;
+        transform: translateY(20%);
+}
+  100% { opacity: 1; 
+    transform: translateY(0);}
+}

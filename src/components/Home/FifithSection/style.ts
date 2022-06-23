@@ -13,9 +13,6 @@ h1{
     padding-bottom: 48px;
     line-height: 54px;
     font-weight: bold;
-    :hover{
-        animation: textAppear 0.5s ease-in-out;
-    }
 }
 h3{
     font-size: 24px;
@@ -26,16 +23,6 @@ h3{
 p{
     font-size: 16px;
     line-height: 26px;
-}
-@keyframes textAppear{
-    0%{
-        opacity: 0;
-        transform: translateY(40%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 `
 export const Card = styled.div`
@@ -49,6 +36,7 @@ border-radius: 7.5px;
 border: 1px solid #292A2E;
 flex-shrink: 0;
 align-self: flex-end;
+transition: all 0.5s;
 h1{
     padding: 32px 0px 16px 32px;
     font-size: 24px;
@@ -59,13 +47,30 @@ p{
     padding: 0px 32px 32px;
 }
 .icon{
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
-    width: 67%;
+    width: 23%;
     border-right: 1px solid #292A2E;
     img{
         width: 57%;
+        object-fit: contain;
     }
+}
+.fadeIn{
+    animation: fadeIn 0.5s;
+    opacity: 1;
+}
+.fadeOut{
+    opacity: 0;
+
+}
+@keyframes fadeIn {
+  0% { opacity: 0;
+        transform: translateY(20%);
+}
+  100% { opacity: 1; 
+    transform: translateY(0);}
 }
 
 `
